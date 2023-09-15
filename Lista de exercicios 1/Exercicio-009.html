@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var largura = parseFloat(prompt("Largura da parede em metros: "));
+        var altura = parseFloat(prompt("Altura da parede em metros: "));
+
+        var area = largura * altura;
+
+        var cobertura = 2;
+
+        var quantidadeTinta = area / cobertura;
+
+        console.log("A área a ser pintada é de " + area.toFixed(2) + " metros quadrados");
+        console.log("Precisará de " + quantidadeTinta.toFixed(2) + "litros de tinta para o serviço");
+    </script>
+</body>
+</html>
