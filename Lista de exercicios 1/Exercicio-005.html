@@ -6,17 +6,32 @@
     <title>Document</title>
 </head>
 <body>
+
+    <form action="">
+        <div>
+            <label for="idNumero">Numero</label> <br> 
+            <input type="number" id="idNumero" name="nmNumero">
+        </div>
+        <div>
+            <input type="button" value="Calcular" onclick="calcular()">
+        </div>
+        <div>
+            <output id="idOut1"></output>
+        </div>
+        <div>
+            <output id="idOut2"></output>
+        </div>
+    </form>
     
     <script>
-        var num = prompt("Digite um número: ");
+         function calcular() {
+            var numero = Number(document.getElementById("idNumero").value)
+            var antecessor = numero - 1
+            var sucessor = numero + 1
 
-        num = parseInt(num);
-
-        var antecessor = num - 1;
-        var sucessor = num + 1;
-
-        console.log("O antecessor de " + num + " é " + antecessor);
-        console.log("O sucessor de " + num + " é " + sucessor);
+            document.getElementById("idOut1").innerText = "O antecessor de "+ numero +" é " + antecessor
+            document.getElementById("idOut2").innerText = "O sucessor de "+ numero +" é " + sucessor
+        }
 
 
     </script>

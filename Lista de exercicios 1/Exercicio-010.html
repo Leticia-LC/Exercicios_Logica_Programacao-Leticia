@@ -6,23 +6,24 @@
     <title>Document</title>
 </head>
 <body>
+
+    <form action="">
+
+        <label for="idPrecoInt">Preço Integral:</label> <br>
+        <input type="number" id="idPrecoInt" name="nmPrecoInt" step="0.01"> <br><br>
+        <input type="button" value="Calcular Desconto" onclick="calcularDesconto()"><br>
+        <output id="idOut"></output><br>
+
+    </form>
     
     <script>
-        var preco = prompt("Digite o preço do produto: ");
-        var precoPromocional;
-        var desconto;
-
-        preco = parseFloat(preco);
-        
-        desconto = preco * 0.05;
-        precoPromocional = preco - desconto;
-
-        console.log("O preço promocional do produto é de R$: " + precoPromocional);
-
-
-
-
-
+        function calcularDesconto() {
+            var precoProduto = Number(document.getElementById("idPrecoInt").value)
+            var precoPromocional = precoProduto - ( precoProduto * 0.05)
+                    
+            document.getElementById("idOut").innerText = "Preço Integral do Produto: R$" + precoProduto.toFixed(2) + "\n" + "Preço Promocional: R$" + precoPromocional.toFixed(2)
+                                                   
+        }
     </script>
 </body>
 </html>

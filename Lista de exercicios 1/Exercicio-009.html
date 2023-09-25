@@ -6,18 +6,29 @@
     <title>Document</title>
 </head>
 <body>
+
+    <form action="">
+
+        <label for="idLargura">Largura:</label> <br>
+        <input type="number" id="idLargura" name="nmLargura" step="0.01"> <br><br>
+        <label for="idAltura">Altura:</label> <br>
+        <input type="number" id="idAltura" name="nmAltura" step="0.01"> <br><br>
+        <input type="button" value="Calcular" onclick="calcular()"><br>
+        <output id="idOut"></output><br>
+
+
+    </form>
+
     <script>
-        var largura = parseFloat(prompt("Largura da parede em metros: "));
-        var altura = parseFloat(prompt("Altura da parede em metros: "));
-
-        var area = largura * altura;
-
-        var cobertura = 2;
-
-        var quantidadeTinta = area / cobertura;
-
-        console.log("A área a ser pintada é de " + area.toFixed(2) + " metros quadrados");
-        console.log("Precisará de " + quantidadeTinta.toFixed(2) + "litros de tinta para o serviço");
+        function calcular() {
+            var largura = Number(document.getElementById("idLargura").value)
+            var altura = Number(document.getElementById("idAltura").value)
+            var area = largura * altura 
+            var qtdTinta =  area/2 
+             
+            document.getElementById("idOut").value = "Area: " + area + "metros quadrados - Quantidade de Tinta: " + qtdTinta + " Litros"
+        }      
+        
     </script>
 </body>
 </html>

@@ -6,17 +6,27 @@
     <title>Document</title>
 </head>
 <body>
+
+    <form action="">
+
+        <label for="idNum">Número:</label> <br>
+        <input type="number" id="idNum" name="nmNum" step="0.01"> <br><br>
+        <input type="button" value="Calcular" onclick="calcular()"><br>
+        <output id="idOut1"></output><br>
+        <output id="idOut2"></output>
+
+    </form>
     
     <script>
-        var num = prompt("Digite um número ");
+        function calcular() {
+            var num = Number(document.getElementById("idNum").value)
+            var dobro = num * 2  
+            var terco = num / 3
 
-        numero = parseFloat(num);
-
-        var dobro = num * 2;
-        var tercaParte = num / 3;
-
-        console.log("O dobro de " + num + " é " + dobro);
-        console.log("A terça parte de " + num + " é " + tercaParte);
+            document.getElementById("idOut1").value = "O dobro de "+ num +" é " + dobro
+            document.getElementById("idOut2").value = "A terça parte de "+ num +" é " + terco
+            
+        }
     </script>
 </body>
 </html>

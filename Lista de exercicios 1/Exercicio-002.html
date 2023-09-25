@@ -6,12 +6,33 @@
     <title>Document</title>
 </head>
 <body>
+
+    <form action="">
+        <div>
+            <label for="idNome">Nome:</label> <br> 
+            <input type="text" id="idNome" name="nmNome">
+        </div>
+        <div>
+            <label for="idSalario">Salário:</label> <br>
+            <input type="number" id="idSalario" min="0" step="0.01">
+        </div>
+        <div>
+            <input type="button" value="Capturar" onclick="capturar()">
+        </div>
+        <div>
+            <output id="idOut"></output>
+        </div>
+    </form>
     
     <script>
-        var nome = prompt("Nome do Funcionário: ");
-        var salario = prompt("Salário: ");
+        function capturar() {
+            let nome = document.getElementById("idNome").value
+            let salario = document.getElementById("idSalario").value
 
-        console.log("O funcionário " + nome + " tem um salário de " + salario + " em Junho");
+            document.getElementById("idOut").innerText = "O funcionário " + nome + " tem um salário de " + salario + " em Junho."
+
+        }
+
     </script>
     
 </body>

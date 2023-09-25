@@ -6,16 +6,25 @@
     <title>Document</title>
 </head>
 <body>
+
+    <form action="">
+
+        <label for="idMet">Reais:</label> <br>
+        <input type="number" id="idReal" name="nmReal" step="0.01"> <br><br>
+        <input type="button" value="Converter" onclick="converter()"><br>
+        <output id="idOut"></output><br>
+
+    </form>
+
     
     <script>
-        var reais = prompt("Quantidade em  reais na  carteira: ");
-        var taxaConversao = 3.45;
+        function converter() {
+            var reais = Number(document.getElementById("idReal").value)
+            var dolares = reais/3.45 
+             
+            document.getElementById("idOut").value = "Reais: "+ reais + " Dolares:  "+  dolares.toFixed(2)
 
-        reais = parseFloat(reais);
-
-        var dolares = reais / taxaConversao;
-
-        console.log("Com R$ " + reais + " é possível comprar U$ " + dolares.toFixed(2));
+        }
 
 
     </script>
