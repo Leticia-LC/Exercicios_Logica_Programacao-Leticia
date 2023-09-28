@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+        <label for="idVelocidade">Velocidade:</label><br>
+        <input type="number" id="idVelocidade" name="nmVelocidade"><br><br>
+        <button type="button" onclick="testarVelocidade()">Testar Velocidade</button>
+        <output id="idOut"></output>
+
+    </form>
+
+    <script>
+
+        function testarVelocidade(){
+            var velocidade = Number(document.querySelector("#idVelocidade").value)
+            var saida = document.querySelector("#idOut")
+            var multa
+
+            if(velocidade > 80){
+                multa = (velocidade - 80) * 5
+                saida.value = "Multa: R$" + multa.toFixed(2)
+            } else{
+                saida.value = "Dentro do limite de velocidade"
+            }
+        }
+        
+    </script>
+    
+</body>
+</html>
