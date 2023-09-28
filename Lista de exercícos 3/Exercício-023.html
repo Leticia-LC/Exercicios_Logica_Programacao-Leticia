@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+        <label for="idNome">Nome: </label>
+        <input type="text" id="idNome" name="nmNome"><br><br>
+        <label for="idNota1">Nota 1: </label>
+        <input type="number" id="idNota1" name="nmNota1" step="0.01"><br><br>
+        <label for="idNota2">Nota 2: </label>
+        <input type="number" id="idNota2" name="nmNota2" step="0.01"><br>
+
+        <button type="button" onclick="calculaMedia()">Calcular Média</button>
+        <output id="idOut"></output>
+
+    </form>
+
+    <script>
+        function calculaMedia(){
+            var nome = document.getElementById("idNome").value 
+            var nota1 = Number(document.getElementById("idNota1").value)
+            var nota2 = Number(document.getElementById("idNota2").value)
+            var situacao
+            
+            let media = (nota1 + nota2)/2
+
+            if(media > 7){
+                situacao = "Aprovado"
+
+            }else{
+                situacao = "Reprovado"
+            }
+
+            document.getElementById("idOut").innerText = "Olá " + nome + " sua média foi: " + media +  " Situação: " + situacao
+
+
+        }
+    </script>
+    
+</body>
+</html>

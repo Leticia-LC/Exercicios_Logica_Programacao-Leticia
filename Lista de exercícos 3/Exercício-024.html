@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+        <label for="idNum">Número: </label><br>
+        <input type="number" id="idNum" name="nmNum"><br><br>
+        <button type="button" onclick="testarNum()">Testar</button><br>
+        <output id="idOut"></output>
+
+    </form>
+
+    <script>
+
+        function testarNum() {
+            let numero = document.querySelector("#idNum").value
+            let resultado
+
+            let resto = numero % 2
+
+            if(resto == 0){
+                resultado = "O número: " + numero + " é par"
+
+            } else {
+                resultado = "O número: " + numero + " é ímpar"
+
+            }
+
+            document.getElementById("idOut").value = resultado
+        }
+
+    </script>
+    
+</body>
+</html>
