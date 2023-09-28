@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+        <laber for="idAnoNasc"> Ano de Nascimento: </laber><br>
+        <input type="number" id="idAnoNasc" name="nmAnoNasc"><br><br>
+        <button type="button" onclick="testarIdade()">Posso votar?</button>
+        <output id="idOut"></output>
+    </form>
+
+    <script>
+
+        function testarIdade(){
+            var anoNasc = Number(document.querySelector("#idAnoNasc").value)
+            var saida = document.querySelector("#idOut")
+            var anoAtual = 2023
+            
+            var idade = anoAtual - anoNasc
+
+            if(idade >= 16){
+                saida.value = "Sua idade é: " + idade + " você já pode votar"
+            }else{
+            saida.value = "Sua idade é: " + idade + " você ainda não pode votar"
+            }
+        }
+    </script>
+    
+</body>
+</html>
