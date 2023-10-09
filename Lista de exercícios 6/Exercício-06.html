@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label for="idNome">Nome: </label><br>
+    <input type="text" id="idNome" name="nmNome"><br><br>
+    <input type="button" value="salvar" onclick="salvar()">
+    <input type="button" value="exibir" onclick="exibir()">
+
+    <script>
+
+        var nome = []
+
+        function salvar(){
+            nome.push(document.getElementById("idNome").value)
+            document.getElementById("idNome").value = ""
+
+        }
+
+        function exibir(){
+            let nomes = ""
+            for(let i = (nome.lenght - 1); i > -1; i--){
+                console.log(nome[i]);
+                nomes = nomes + nome[i] + ";"
+  
+            }
+        }
+
+    </script>
+</body>
+</html>
