@@ -1,0 +1,26 @@
+form {
+    display: flex;
+    justify-content: center;
+}
+
+.tela {
+    width: 40vw;
+    border: 1px solid black;
+    padding: 20px;
+
+}
+
+.dadoEntrada label {
+    display: block;
+}
+
+.dadoEntrada input {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.botoes {
+    display: flex;
+    justify-content: end;
+    column-gap: 10px;
+}
