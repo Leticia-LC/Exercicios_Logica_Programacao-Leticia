@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <div class="row">
+        <div class="col40">
+
+        </div>
+        <div class="col20">
+            <form action="" id="idForm">
+                <fieldset>
+                    <legend>Cadastro de Funcionários</legend>
+                    <div>
+                        <input type="text" id="idNome" name="nmNome" placeholder="Nome" class="entrada margens">
+                    </div>
+                    <div>
+                        <input type="number" id="idSalario" name="nmSalario" placeholder="Salario" class="entrada margens">
+                    </div>
+                    <div>
+                        <div class="line margens">
+                            <input type="radio" name="nmGenero" id="idFem" value="F" checked>
+                            <label for="idFem">Feminino</label>
+                        </div>
+                        <div class="line">
+                            <input type="radio" name="nmGenero"  id="idMasc" value="M">
+                            <label for="idMasc">Masculino</label>
+                        </div>
+                    </div>
+                    <div class="col100">
+                        <button type="button" id="idBtCadastrar" class="margens">Cadastrar</button>
+                        <button type="button" id="idBtRelatorio" class="margens">Relatório</button>
+                    </div>
+                    <div>
+                        <output id="idOut"></output>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="col40">
+
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+
+
+</body>
+
+</html>

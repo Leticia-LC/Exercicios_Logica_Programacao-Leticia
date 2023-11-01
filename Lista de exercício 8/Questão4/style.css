@@ -1,0 +1,33 @@
+.margens {
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.line {
+    display: inline;
+}
+
+.entrada {
+    width: 90%;
+}
+
+.row {
+    display: flex;
+}
+
+.col40 {
+    width: 40vw;
+}
+
+.col20 {
+    width: 20vw;
+}
+
+.col100 {
+    width: 100%;
+}
+
+.alerta {
+    color: red;
+}
